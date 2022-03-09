@@ -35,7 +35,7 @@ var volcano = ['volcano manor', 'volcano manor', 'prison town church', 'temple o
 
 var leyndell = ['divine bridge'];
 
-var caelid = ['smoldering church', 'rotview balcony', 'caelem ruins', 'smoldering wall', 'called highway south', 'selia backstreets', 'selia under-stair', 'chair-crypt of sellia', 'church of the plague', 'deep siofra well', 'impassable greatbridge', 'chamber outside the plaza', 'starscourge radahn', 'sellia crystal tunnel', 'heart of aenoia', 'greyoll\'s dragonbarrow', 'dragonbarrow west', 'fort froth', 'dragonbarrow fork', 'lenne\'s rise', 'farum greatbridge', 'bestial sanctum', 'sellia hideaway'];
+var caelid = ['smoldering church', 'rotview balcony', 'caelem ruins', 'smoldering wall', 'caelid highway south', 'sellia backstreets', 'sellia under-stair', 'chair-crypt of sellia', 'church of the plague', 'deep siofra well', 'impassable greatbridge', 'chamber outside the plaza', 'starscourge radahn', 'sellia crystal tunnel', 'heart of aeonia', 'greyoll\'s dragonbarrow', 'dragonbarrow west', 'fort faroth', 'dragonbarrow fork', 'lenne\'s rise', 'farum greatbridge', 'bestial sanctum', 'sellia hideaway'];
 
 function getCounts() {
     var areas = ['roundtable', 'limgrave', 'stormveil', 'liurnia', 'academy', 'altus', 'volcano', 'leyndell', 'caelid'];
