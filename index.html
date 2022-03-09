@@ -4,12 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sites of Grace Checklist</title>
+    <script src="index.js"></script>
 </head>
 <body>
-    <div>
+
+    <div id="checkbox-container">
         <h3>Roundtable Hold</h3>
-        <input type="checkbox" id="table-of-lost-grace">
+        <input type="checkbox" id="table-of-lost-grace" onclick="save('table-of-lost-grace')">
+        <label for="table-of-lost-grace">Table of Lost Grace</label><br>
     </div>
+
+    <div>
+        <h3>Limgrave</h3>
+        <input type="checkbox" id="cave-of-knowledge" onclick="save('cave-of-knowledge')">
+        <label for="cave-of-knowledge">Cave of Knowledge</label><br>
+        <input type="checkbox" id="third-church-of-marika" onclick="save('third-church-of-marika')">
+        <label for="third-church-of-marika">Third Church of Marika</label><br>
+        <input type="checkbox" id="church-of-elleh" onclick="save('church-of-elleh')">
+        <label for="church-of-elleh">Church of Elleh</label><br>
+    </div>
+
 </body>
 </html>
