@@ -1,0 +1,19 @@
+body {
+    background-color: #070F15;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+div {
+    border: 1px solid white;
+    margin: 16px;
+    padding: 16px;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+span {
+    float: right;
+}

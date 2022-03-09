@@ -6,228 +6,421 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sites of Grace Checklist</title>
     <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button onclick="localStorage.clear();">Clear</button>
 
-    <div id="checkbox-container">
-        <h3>Roundtable Hold</h3>
-        <input type="checkbox" id="table-of-lost-grace" onclick="save('table-of-lost-grace')">
-        <label for="table-of-lost-grace">Table of Lost Grace</label><br>
+    <div>
+        <h2 style="margin-bottom: 0px;" id="all-count"></h2>
     </div>
 
     <div>
-        <h3>Limgrave</h3>
-        <input type="checkbox" id="cave-of-knowledge" onclick="save('cave-of-knowledge')">
-        <label for="cave-of-knowledge">Cave of Knowledge</label><br>
-        <input type="checkbox" id="third-church-of-marika" onclick="save('third-church-of-marika')">
-        <label for="third-church-of-marika">Third Church of Marika</label><br>
-        <input type="checkbox" id="church-of-elleh" onclick="save('church-of-elleh')">
-        <label for="church-of-elleh">Church of Elleh</label><br>
+        <h2>Roundtable Hold <span id="roundtable-count"></span></h2>
+        <input type="checkbox" id="table of lost grace" onclick="save('table of lost grace')">
+        <label for="table of lost grace">Table of Lost Grace</label><br>
     </div>
 
-    Roundtable Hold
-- [x] Table of Lost Grace
+    <div>
+        <h2>Limgrave <span id="limgrave-count"></span></h2>
+        <input type="checkbox" id="the first step" onclick="save('the first step')">
+        <label for="the first step">The First Step</label><br>
+        <input type="checkbox" id="church of elleh" onclick="save('church of elleh')">
+        <label for="church of elleh">Church of Elleh</label><br>
+        <input type="checkbox" id="gatefront" onclick="save('gatefront')">
+        <label for="gatefront">Gatefront</label><br>
+        <input type="checkbox" id="waypoint ruins cellar" onclick="save('waypoint ruins cellar')">
+        <label for="waypoint ruins cellar">Waypoint Ruins Cellar</label><br>
+        <input type="checkbox" id="artist's shack" onclick="save('artist\'s shack')">
+        <label for="artist's shack">Artist's Shack</label><br>
+        <input type="checkbox" id="third church of marika" onclick="save('third church of marika')">
+        <label for="third church of marika">Third Church of Marika</label><br>
+        <input type="checkbox" id="fort haight west" onclick="save('fort haight west')">
+        <label for="fort haight west">Fort Haight West</label><br>
+        <input type="checkbox" id="agheel lake south" onclick="save('agheel lake south')">
+        <label for="agheel lake south">Agheel Lake South</label><br>
+        <input type="checkbox" id="agheel lake north" onclick="save('agheel lake north')">
+        <label for="agheel lake north">Agheel Lake North</label><br>
+        <input type="checkbox" id="church of dragon communion" onclick="save('church of dragon communion')">
+        <label for="church of dragon communion">Church of Dragon Communion</label><br>
+        <input type="checkbox" id="seaside ruins" onclick="save('seaside ruins')">
+        <label for="seaside ruins">Seaside Ruins</label><br>
+        <input type="checkbox" id="mistwood outskirts" onclick="save('mistwood outskirts')">
+        <label for="mistwood outskirts">Mistwood Outskirts</label><br>
+        <input type="checkbox" id="murkwater coast" onclick="save('murkwater coast')">
+        <label for="murkwater coast">Murkwater Coast</label><br>
+        <input type="checkbox" id="summonwater village outskirts" onclick="save('summonwater village outskirts')">
+        <label for="summonwater village outskirts">Summonwater Village Outskirts</label><br>
+        <input type="checkbox" id="stormfoot catacombs" onclick="save('stormfoot catacombs')">
+        <label for="stormfoot catacombs">Stormfoot Catacombs</label><br>
+        <input type="checkbox" id="murkwater catacombs" onclick="save('murkwater catacombs')">
+        <label for="murkwater catacombs">Murkwater Catacombs</label><br>
+        <input type="checkbox" id="groveside cave" onclick="save('groveside cave')">
+        <label for="groveside cave">Groveside Cave</label><br>
+        <input type="checkbox" id="coastal cave" onclick="save('coastal cave')">
+        <label for="coastal cave">Coastal Cave</label><br>
+        <input type="checkbox" id="murkwater cave" onclick="save('murkwater cave')">
+        <label for="murkwater cave">Murkwater Cave</label><br>
+        <input type="checkbox" id="highroad cave" onclick="save('highroad cave')">
+        <label for="highroad cave">Highroad Cave</label><br>
+        <input type="checkbox" id="limgrave tunnels" onclick="save('limgrave tunnels')">
+        <label for="limgrave tunnels">Limgrave Tunnels</label><br>
 
-Limgrave
-- [x] The First Step
-- [x] Church of Elleh
-- [x] Gatefront
-- [x] Waypoint Ruins Cellar
-- [x] Artist's Shack
-- [x] Third Church of Marika
-- [x] Fort Haight West
-- [x] Agheel Lake South
-- [x] Agheel Lake North
-- [x] Church of Dragon Communion
-- [x] Seaside Ruins
-- [x] Mistwood Outskirts
-- [x] Murkwater Coast
-- [x] Summonwater Village Outskirts
-- [x] Stormfoot Catacombs
-- [x] Murkwater Catacombs
-- [x] Groveside Cave
-- [x] Coastal Cave
-- [x] Murkwater Cave
-- [x] Highroad Cave
-- [x] Limgrave Tunnels
-Stranded Graveyard
-- [x] Cave of Knowledge
-- [x] Stranded Graveyard
-Stormhill
-- [x] Stormhill Shack
-- [x] Castleward Tunnel
-- [x] Margit, the Fell Omen
-- [x] Warmaster's Shack
-- [x] Saintsbridge
-- [x] Deathtouched Catacombs
-- [x] Limgrave Tower Bridge
-- [x] Divine Tower of Limgrave
-Weeping Peninsula
-- [x] Church of Pilgrimage
-- [x] Castle Morne Rampart
-- [x] Tombsward
-- [x] South of the Lookout Tower
-- [ ] Ailing Village Outskirts
-- [x] Beside the Crater-Pocked Glade
-- [x] Isolated Merchant's Shack
-- [x] Fourth Church of Marika
-- [x] Bridge of Sacrifice
-- [x] Castle Morne Lift
-- [x] Behind the Castle
-- [x] Beside the Rampart Gaol
-- [x] Morne Moangrave
-- [x] Impaler's Catacombs
-- [x] Tombsward Catacombs
-- [x] Earthbore Cave
-- [ ] Tombsward Cave
-- [x] Morne Tunnel
+        <h3>Stranded Graveyard</h3>
+        <input type="checkbox" id="cave of knowledge" onclick="save('cave of knowledge')">
+        <label for="cave of knowledge">Cave of Knowledge</label><br>
+        <input type="checkbox" id="stranded graveyard" onclick="save('stranded graveyard')">
+        <label for="stranded graveyard">Stranded Graveyard</label><br>
 
-Stormveil Castle
-- [x] Stormveil Main Gate
-- [x] Gateside Chamber
-- [x] Stormveil Cliffside
-- [x] Rampart Tower
-- [x] Liftside Chamber
-- [x] Secluded Cell
-- [x] Godrick the Grafted
+        <h3>Stormhill</h3>
+        <input type="checkbox" id="stormhill shack" onclick="save('stormhill shack')">
+        <label for="stormhill shack">Stormhill Shack</label><br>
+        <input type="checkbox" id="castleward tunnel" onclick="save('castleward tunnel')">
+        <label for="castleward tunnel">Castleward Tunnel</label><br>
+        <input type="checkbox" id="margit, the fell omen" onclick="save('margit, the fell omen')">
+        <label for="margit, the fell omen">Margit, the Fell Omen</label><br>
+        <input type="checkbox" id="warmaster's shack" onclick="save('warmaster\'s shack')">
+        <label for="warmaster's shack">Warmaster's Shack</label><br>
+        <input type="checkbox" id="saintsbridge" onclick="save('saintsbridge')">
+        <label for="saintsbridge">Saintsbridge</label><br>
+        <input type="checkbox" id="deathtouched catacombs" onclick="save('deathtouched catacombs')">
+        <label for="deathtouched catacombs">Deathtouched Catacombs</label><br>
+        <input type="checkbox" id="limgrave tower bridge" onclick="save('limgrave tower bridge')">
+        <label for="limgrave tower bridge">Limgrave Tower Bridge</label><br>
+        <input type="checkbox" id="divine tower of limgrave" onclick="save('divine tower of limgrave')">
+        <label for="divine tower of limgrave">Divine Tower of Limgrave</label><br>
 
-Liurnia of the Lakes
-- [x] Lake-Facing Cliffs
-- [x] Liurnia Lake Shore
-- [x] Laskyar Ruins
-- [x] Scenic Isle
-- [x] Academy Gate Town
-- [x] South Raya Lucaria Gate
-- [x] Main Academy Gate
-- [x] Liurnia Highway South
-- [x] Liurnia Highway North
-- [x] Gate Town Bridge
-- [x] Artist's Shack
-- [ ] Eastern Liurnia Lake Shore
-- [x] Eastern Tableland
-- [x] Church of Vows
-- [x] Ruined Labyrinth
-- [x] Mausoleum Compound
-- [x] Slumbering Wolf’s Shack
-- [x] Boilprawn Shack
-- [ ] Fallen Ruins of the Lake
-- [ ] Folly on the Lake
-- [x] Slumbering Wolf's Shack
-- [x] Village of the Albinaurics
-- [x] Converted Tower
-- [x] Revenger's Shack
-- [x] Temple Quarter
-- [x] Crystalline Woods
-- [x] Foot of the Four Belfries
-- [x] The Four Belfries
-- [ ] Sorcerer's Isle
-- [ ] Gate Town North
-- [x] Northern Liurnia Lake Shore
-- [x] Road to the Manor
-- [x] Main Caria Manor Gate
-- [x] Manor Upper Level
-- [x] Manor Lower Level
-- [x] Royal Moongazing Grounds
-- [x] Ranni's Rise
-- [ ] Behind Caria Manor
-- [x] The Ravine
-- [x] Ravine-Veiled Village
-- [x] Cliffbottom Catacombs
-- [x] Road's End Catacombs
-- [x] Black Knife Catacombs
-- [x] Stillwater Cave
-- [x] Lakeside Crystal Cave
-- [x] Academy Crystal Cave
-- [x] Raya Lucaria Crystal Tunnel
-- [x] Study Hall Entrance
-- [x] Liurnia Tower Bridge
-- [x] Divine Tower of Liurnia
-Bellum Highway
-- [x] East Raya Lucaria Gate
-- [x] Bellum Church
-- [x] Grand Lift of Dectus
-- [x] Church of Inhibition
-Ruin-Strewn Precipice
-- [x] Ruin-Strewn Precipice
-- [x] Ruin-Strewn Precipice Overlook
-- [x] Magma Wyrm
-Moonlight Altar
-- [x] Moonlight Altar
-- [x] Cathedral of Manus Celes
+        <h3>Weeping Peninsula</h3>
+        <input type="checkbox" id="church of pilgrimage" onclick="save('church of pilgrimage')">
+        <label for="church of pilgrimage">Church of Pilgrimage</label><br>
+        <input type="checkbox" id="castle morne rampart" onclick="save('castle morne rampart')">
+        <label for="castle morne rampart">Castle Morne Rampart</label><br>
+        <input type="checkbox" id="tombsward" onclick="save('tombsward')">
+        <label for="tombsward">Tombsward</label><br>
+        <input type="checkbox" id="south of the lookout tower" onclick="save('south of the lookout tower')">
+        <label for="south of the lookout tower">South of the Lookout Tower</label><br>
+        <input type="checkbox" id="ailing village outskirts" onclick="save('ailing village outskirts')">
+        <label for="ailing village outskirts">Ailing Village Outskirts</label><br>
+        <input type="checkbox" id="beside the crater-pocked glade" onclick="save('beside the crater-pocked glade')">
+        <label for="beside the crater-pocked glade">Beside the Crater-Pocked Glade</label><br>
+        <input type="checkbox" id="isolated merchant's shack" onclick="save('isolated merchant\'s shack')">
+        <label for="isolated merchant's shack">Isolated Merchant's Shack</label><br>
+        <input type="checkbox" id="fourth church of marika" onclick="save('fourth church of marika')">
+        <label for="fourth church of marika">Fourth Church of Marika</label><br>
+        <input type="checkbox" id="bridge of sacrifice" onclick="save('bridge of sacrifice')">
+        <label for="bridge of sacrifice">Bridge of Sacrifice</label><br>
+        <input type="checkbox" id="castle morne lift" onclick="save('castle morne lift')">
+        <label for="castle morne lift">Castle Morne Lift</label><br>
+        <input type="checkbox" id="behind the castle" onclick="save('behind the castle')">
+        <label for="behind the castle">Behind the Castle</label><br>
+        <input type="checkbox" id="beside the rampart gaol" onclick="save('beside the rampart gaol')">
+        <label for="beside the rampart gaol">Beside the Rampart Gaol</label><br>
+        <input type="checkbox" id="morne moangrave" onclick="save('morne moangrave')">
+        <label for="morne moangrave">Morne Moangrave</label><br>
+        <input type="checkbox" id="impaler's catacombs" onclick="save('impaler\'s catacombs')">
+        <label for="impaler's catacombs">Impaler's Catacombs</label><br>
+        <input type="checkbox" id="tombsward catacombs" onclick="save('tombsward catacombs')">
+        <label for="tombsward catacombs">Tombsward Catacombs</label><br>
+        <input type="checkbox" id="earthbore cave" onclick="save('earthbore cave')">
+        <label for="earthbore cave">Earthbore Cave</label><br>
+        <input type="checkbox" id="tombsward cave" onclick="save('tombsward cave')">
+        <label for="tombsward cave">Tombsward Cave</label><br>
+        <input type="checkbox" id="morne tunnel" onclick="save('morne tunnel')">
+        <label for="morne tunnel">Morne Tunnel</label><br>
+    </div>
 
-Academy of Raya Lucaria
-- [x] Church of the Cuckoo
-- [x] Schoolhouse Classroom
-- [x] Debate Parlor
-- [x] Raya Lucaria Grand Library
+    <div>
+        <h2>Stormveil Castle <span id="stormveil-count"></span></h2>
+        <input type="checkbox" id="stormveil main gate" onclick="save('stormveil main gate')">
+        <label for="stormveil main gate">Stormveil Main Gate</label><br>
+        <input type="checkbox" id="gateside chamber" onclick="save('gateside chamber')">
+        <label for="gateside chamber">Gateside Chamber</label><br>
+        <input type="checkbox" id="stormveil cliffside" onclick="save('stormveil cliffside')">
+        <label for="stormveil cliffside">Stormveil Cliffside</label><br>
+        <input type="checkbox" id="rampart tower" onclick="save('rampart tower')">
+        <label for="rampart tower">Rampart Tower</label><br>
+        <input type="checkbox" id="liftside chamber" onclick="save('liftside chamber')">
+        <label for="liftside chamber">Liftside Chamber</label><br>
+        <input type="checkbox" id="secluded cell" onclick="save('secluded cell')">
+        <label for="secluded cell">Secluded Cell</label><br>
+        <input type="checkbox" id="godrick the grafted" onclick="save('godrick the grafted')">
+        <label for="godrick the grafted">Godrick the Grafted</label><br>
+    </div>
 
-Altus Plateau
-- [x] Abandoned Coffin
-- [x] Erdtree-Gazing Hill
-- [x] Altus Highway Junction
-- [x] Bower of Bounty
-- [x] Windmill Village
-- [x] Windmill Heights
-- [x] Road of Iniquity Side Path
-- [x] Rampartside Path
-- [x] Old Altus Tunnel
-- [x] Altus Tunnel
-Mt. Gelmir
-- [x] Bridge of Iniquity
-- [x] First Mt. Gelmir Campsite
-- [x] Ninth Mt. Gelmir Campsite
-- [x] Road of Iniquity
-- [x] Seethewater River
-- [x] Seethewater Terminus
-- [x] Craftsman’s Shack
-- [x] Primeval Sorcerer Azur
-- [x] Gelmir Hero’s Grave
-- [x] Seethewater Cave
-- [x] Volcano Cave
-Leyndell, Royal Capital
-- [x] Outer Wall Phantom Tree
-- [x] Minor Erdtree Church
-- [x] Sealed Tunnel
+    <div>
+        <h2>Liurnia of the Lakes <span id="liurnia-count"></span></h2>
+        <input type="checkbox" id="lake-facing cliffs" onclick="save('lake-facing cliffs')">
+        <label for="lake-facing cliffs">Lake-Facing Cliffs</label><br>
+        <input type="checkbox" id="liurnia lake shore" onclick="save('liurnia lake shore')">
+        <label for="liurnia lake shore">Liurnia Lake Shore</label><br>
+        <input type="checkbox" id="laskyar ruins" onclick="save('laskyar ruins')">
+        <label for="laskyar ruins">Laskyar Ruins</label><br>
+        <input type="checkbox" id="scenic isle" onclick="save('scenic isle')">
+        <label for="scenic isle">Scenic Isle</label><br>
+        <input type="checkbox" id="academy gate town" onclick="save('academy gate town')">
+        <label for="academy gate town">Academy Gate Town</label><br>
+        <input type="checkbox" id="south raya lucaria gate" onclick="save('south raya lucaria gate')">
+        <label for="south raya lucaria gate">South Raya Lucaria Gate</label><br>
+        <input type="checkbox" id="main academy gate" onclick="save('main academy gate')">
+        <label for="main academy gate">Main Academy Gate</label><br>
+        <input type="checkbox" id="liurnia highway south" onclick="save('liurnia highway south')">
+        <label for="liurnia highway south">Liurnia Highway South</label><br>
+        <input type="checkbox" id="liurnia highway north" onclick="save('liurnia highway north')">
+        <label for="liurnia highway north">Liurnia Highway North</label><br>
+        <input type="checkbox" id="gate town bridge" onclick="save('gate town bridge')">
+        <label for="gate town bridge">Gate Town Bridge</label><br>
+        <input type="checkbox" id="artist's shack" onclick="save('artist\'s shack')">
+        <label for="artist's shack">Artist's Shack</label><br>
+        <input type="checkbox" id="eastern liurnia lake shore" onclick="save('eastern liurnia lake shore')">
+        <label for="eastern liurnia lake shore">Eastern Liurnia Lake Shore</label><br>
+        <input type="checkbox" id="eastern tableland" onclick="save('eastern tableland')">
+        <label for="eastern tableland">Eastern Tableland</label><br>
+        <input type="checkbox" id="church of vows" onclick="save('church of vows')">
+        <label for="church of vows">Church of Vows</label><br>
+        <input type="checkbox" id="ruined labyrinth" onclick="save('ruined labyrinth')">
+        <label for="ruined labyrinth">Ruined Labyrinth</label><br>
+        <input type="checkbox" id="mausoleum compound" onclick="save('mausoleum compound')">
+        <label for="mausoleum compound">Mausoleum Compound</label><br>
+        <input type="checkbox" id="slumbering wolf's shack" onclick="save('slumbering wolf\'s shack')">
+        <label for="slumbering wolf's shack">Slumbering Wolf's Shack</label><br>
+        <input type="checkbox" id="boilprawn shack" onclick="save('boilprawn shack')">
+        <label for="boilprawn shack">Boilprawn Shack</label><br>
+        <input type="checkbox" id="fallen ruins of the lake" onclick="save('fallen ruins of the lake')">
+        <label for="fallen ruins of the lake">Fallen Ruins of the Lake</label><br>
+        <input type="checkbox" id="folly on the lake" onclick="save('folly on the lake')">
+        <label for="folly on the lake">Folly on the Lake</label><br>
+        <input type="checkbox" id="slumbering wolf's shack" onclick="save('slumbering wolf\'s shack')">
+        <label for="slumbering wolf's shack">Slumbering Wolf's Shack</label><br>
+        <input type="checkbox" id="village of the albinaurics" onclick="save('village of the albinaurics')">
+        <label for="village of the albinaurics">Village of the Albinaurics</label><br>
+        <input type="checkbox" id="converted tower" onclick="save('converted tower')">
+        <label for="converted tower">Converted Tower</label><br>
+        <input type="checkbox" id="revenger's shack" onclick="save('revenger\'s shack')">
+        <label for="revenger's shack">Revenger's Shack</label><br>
+        <input type="checkbox" id="temple quarter" onclick="save('temple quarter')">
+        <label for="temple quarter">Temple Quarter</label><br>
+        <input type="checkbox" id="crystalline woods" onclick="save('crystalline woods')">
+        <label for="crystalline woods">Crystalline Woods</label><br>
+        <input type="checkbox" id="foot of the four belfries" onclick="save('foot of the four belfries')">
+        <label for="foot of the four belfries">Foot of the Four Belfries</label><br>
+        <input type="checkbox" id="the four belfries" onclick="save('the four belfries')">
+        <label for="the four belfries">The Four Belfries</label><br>
+        <input type="checkbox" id="sorcerer's isle" onclick="save('sorcerer\'s isle')">
+        <label for="sorcerer's isle">Sorcerer's Isle</label><br>
+        <input type="checkbox" id="gate town north" onclick="save('gate town north')">
+        <label for="gate town north">Gate Town North</label><br>
+        <input type="checkbox" id="northern liurnia lake shore" onclick="save('northern liurnia lake shore')">
+        <label for="northern liurnia lake shore">Northern Liurnia Lake Shore</label><br>
+        <input type="checkbox" id="road to the manor" onclick="save('road to the manor')">
+        <label for="road to the manor">Road to the Manor</label><br>
+        <input type="checkbox" id="main caria manor gate" onclick="save('main caria manor gate')">
+        <label for="main caria manor gate">Main Caria Manor Gate</label><br>
+        <input type="checkbox" id="manor upper level" onclick="save('manor upper level')">
+        <label for="manor upper level">Manor Upper Level</label><br>
+        <input type="checkbox" id="manor lower level" onclick="save('manor lower level')">
+        <label for="manor lower level">Manor Lower Level</label><br>
+        <input type="checkbox" id="royal moongazing grounds" onclick="save('royal moongazing grounds')">
+        <label for="royal moongazing grounds">Royal Moongazing Grounds</label><br>
+        <input type="checkbox" id="ranni's rise" onclick="save('ranni\'s rise')">
+        <label for="ranni's rise">Ranni's Rise</label><br>
+        <input type="checkbox" id="behind caria manor" onclick="save('behind caria manor')">
+        <label for="behind caria manor">Behind Caria Manor</label><br>
+        <input type="checkbox" id="the ravine" onclick="save('the ravine')">
+        <label for="the ravine">The Ravine</label><br>
+        <input type="checkbox" id="ravine-veiled village" onclick="save('ravine-veiled village')">
+        <label for="ravine-veiled village">Ravine-Veiled Village</label><br>
+        <input type="checkbox" id="cliffbottom catacombs" onclick="save('cliffbottom catacombs')">
+        <label for="cliffbottom catacombs">Cliffbottom Catacombs</label><br>
+        <input type="checkbox" id="road's end catacombs" onclick="save('road\'s end catacombs')">
+        <label for="road's end catacombs">Road's End Catacombs</label><br>
+        <input type="checkbox" id="black knife catacombs" onclick="save('black knife catacombs')">
+        <label for="black knife catacombs">Black Knife Catacombs</label><br>
+        <input type="checkbox" id="stillwater cave" onclick="save('stillwater cave')">
+        <label for="stillwater cave">Stillwater Cave</label><br>
+        <input type="checkbox" id="lakeside crystal cave" onclick="save('lakeside crystal cave')">
+        <label for="lakeside crystal cave">Lakeside Crystal Cave</label><br>
+        <input type="checkbox" id="academy crystal cave" onclick="save('academy crystal cave')">
+        <label for="academy crystal cave">Academy Crystal Cave</label><br>
+        <input type="checkbox" id="raya lucaria crystal tunnel" onclick="save('raya lucaria crystal tunnel')">
+        <label for="raya lucaria crystal tunnel">Raya Lucaria Crystal Tunnel</label><br>
+        <input type="checkbox" id="study hall entrance" onclick="save('study hall entrance')">
+        <label for="study hall entrance">Study Hall Entrance</label><br>
+        <input type="checkbox" id="liurnia tower bridge" onclick="save('liurnia tower bridge')">
+        <label for="liurnia tower bridge">Liurnia Tower Bridge</label><br>
+        <input type="checkbox" id="divine tower of liurnia" onclick="save('divine tower of liurnia')">
+        <label for="divine tower of liurnia">Divine Tower of Liurnia</label><br>
 
-Volcano Manor
-- [x] Volcano Manor
-- [x] Prison Town Church
-- [x] Temple of Eiglay
-- [x] Guest Hall
-- [x] Audience Pathway
+        <h3>Bellum Highway</h3>
+        <input type="checkbox" id="east raya lucaria gate" onclick="save('east raya lucaria gate')">
+        <label for="east raya lucaria gate">East Raya Lucaria Gate</label><br>
+        <input type="checkbox" id="bellum church" onclick="save('bellum church')">
+        <label for="bellum church">Bellum Church</label><br>
+        <input type="checkbox" id="grand lift of dectus" onclick="save('grand lift of dectus')">
+        <label for="grand lift of dectus">Grand Lift of Dectus</label><br>
+        <input type="checkbox" id="church of inhibition" onclick="save('church of inhibition')">
+        <label for="church of inhibition">Church of Inhibition</label><br>
 
-Leyndell, Royal Capital
-- [ ] Divine Bridge
+        <h3>Ruin-Strewn Precipice</h3>
+        <input type="checkbox" id="ruin-strewn precipice" onclick="save('ruin-strewn precipice')">
+        <label for="ruin-strewn precipice">Ruin-Strewn Precipice</label><br>
+        <input type="checkbox" id="ruin-strewn precipice overlook" onclick="save('ruin-strewn precipice overlook')">
+        <label for="ruin-strewn precipice overlook">Ruin-Strewn Precipice Overlook</label><br>
+        <input type="checkbox" id="magma wyrm" onclick="save('magma wyrm')">
+        <label for="magma wyrm">Magma Wyrm</label><br>
 
-Caelid
-- [x] Smoldering Church
-- [x] Rotview Balcony
-- [x] Caelem Ruins
-- [ ] Smoldering Wall
-- [ ] Called Highway South
-- [ ] Selia Backstreets
-- [ ] Selia Under-Stair
-- [ ] Chair-Crypt of Sellia
-- [ ] Church of the Plague
-- [ ] Deep Siofra Well
-- [ ] Impassable Greatbridge
-- [ ] Chamber Outside the Plaza
-- [ ] Starscourge Radahn
-- [ ] Sellia Crystal Tunnel
-Swamp of Aeonia
-- [ ] Heart of Aenoia
-Greyoll’s Dragonbarrow
-- [ ] Dragonbarrow West
-- [ ] Fort Froth
-- [ ] Dragonbarrow Fork
-- [ ] Lenne’s Rise
-- [ ] Farum Greatbridge
-- [ ] Bestial Sanctum
-- [ ] Sellia Hideaway
+        <h3>Moonlight Altar</h3>
+        <input type="checkbox" id="moonlight altar" onclick="save('moonlight altar')">
+        <label for="moonlight altar">Moonlight Altar</label><br>
+        <input type="checkbox" id="cathedral of manus celes" onclick="save('cathedral of manus celes')">
+        <label for="cathedral of manus celes">Cathedral of Manus Celes</label><br>
+    </div>
 
-- [ ] Minor Erdtree Catacombs
-- [ ] Rear Gael Tunnel Entrance
-- [ ] Table of Lost Grace
+    <div>
+        <h2>Academy of Raya Lucaria <span id="academy-count"></span></h2>
+        <input type="checkbox" id="church of the cuckoo" onclick="save('church of the cuckoo')">
+        <label for="church of the cuckoo">Church of the Cuckoo</label><br>
+        <input type="checkbox" id="schoolhouse classroom" onclick="save('schoolhouse classroom')">
+        <label for="schoolhouse classroom">Schoolhouse Classroom</label><br>
+        <input type="checkbox" id="debate parlor" onclick="save('debate parlor')">
+        <label for="debate parlor">Debate Parlor</label><br>
+        <input type="checkbox" id="raya lucaria grand library" onclick="save('raya lucaria grand library')">
+        <label for="raya lucaria grand library">Raya Lucaria Grand Library</label><br>
+    </div>
+
+    <div>
+        <h2>Altus Plateau <span id="altus-count"></span></h2>
+        <input type="checkbox" id="abandoned coffin" onclick="save('abandoned coffin')">
+        <label for="abandoned coffin">Abandoned Coffin</label><br>
+        <input type="checkbox" id="erdtree-gazing hill" onclick="save('erdtree-gazing hill')">
+        <label for="erdtree-gazing hill">Erdtree-Gazing Hill</label><br>
+        <input type="checkbox" id="altus highway junction" onclick="save('altus highway junction')">
+        <label for="altus highway junction">Altus Highway Junction</label><br>
+        <input type="checkbox" id="bower of bounty" onclick="save('bower of bounty')">
+        <label for="bower of bounty">Bower of Bounty</label><br>
+        <input type="checkbox" id="windmill village" onclick="save('windmill village')">
+        <label for="windmill village">Windmill Village</label><br>
+        <input type="checkbox" id="windmill heights" onclick="save('windmill heights')">
+        <label for="windmill heights">Windmill Heights</label><br>
+        <input type="checkbox" id="road of iniquity side path" onclick="save('road of iniquity side path')">
+        <label for="road of iniquity side path">Road of Iniquity Side Path</label><br>
+        <input type="checkbox" id="rampartside path" onclick="save('rampartside path')">
+        <label for="rampartside path">Rampartside Path</label><br>
+        <input type="checkbox" id="old altus tunnel" onclick="save('old altus tunnel')">
+        <label for="old altus tunnel">Old Altus Tunnel</label><br>
+        <input type="checkbox" id="altus tunnel" onclick="save('altus tunnel')">
+        <label for="altus tunnel">Altus Tunnel</label><br>
+
+        <h3>Mt. Gelmir</h3>
+        <input type="checkbox" id="bridge of iniquity" onclick="save('bridge of iniquity')">
+        <label for="bridge of iniquity">Bridge of Iniquity</label><br>
+        <input type="checkbox" id="first mt. gelmir campsite" onclick="save('first mt. gelmir campsite')">
+        <label for="first mt. gelmir campsite">First Mt. Gelmir Campsite</label><br>
+        <input type="checkbox" id="ninth mt. gelmir campsite" onclick="save('ninth mt. gelmir campsite')">
+        <label for="ninth mt. gelmir campsite">Ninth Mt. Gelmir Campsite</label><br>
+        <input type="checkbox" id="road of iniquity" onclick="save('road of iniquity')">
+        <label for="road of iniquity">Road of Iniquity</label><br>
+        <input type="checkbox" id="seethewater river" onclick="save('seethewater river')">
+        <label for="seethewater river">Seethewater River</label><br>
+        <input type="checkbox" id="seethewater terminus" onclick="save('seethewater terminus')">
+        <label for="seethewater terminus">Seethewater Terminus</label><br>
+        <input type="checkbox" id="craftsman's shack" onclick="save('craftsman\'s shack')">
+        <label for="craftsman's shack">Craftsman's Shack</label><br>
+        <input type="checkbox" id="primeval sorcerer azur" onclick="save('primeval sorcerer azur')">
+        <label for="primeval sorcerer azur">Primeval Sorcerer Azur</label><br>
+        <input type="checkbox" id="gelmir hero's grave" onclick="save('gelmir hero\'s grave')">
+        <label for="gelmir hero's grave">Gelmir Hero's Grave</label><br>
+        <input type="checkbox" id="seethewater cave" onclick="save('seethewater cave')">
+        <label for="seethewater cave">Seethewater Cave</label><br>
+        <input type="checkbox" id="volcano cave" onclick="save('volcano cave')">
+        <label for="volcano cave">Volcano Cave</label><br>
+
+        <h3>Leyndell, Royal Capital</h3>
+        <input type="checkbox" id="outer wall phantom tree" onclick="save('outer wall phantom tree')">
+        <label for="outer wall phantom tree">Outer Wall Phantom Tree</label><br>
+        <input type="checkbox" id="minor erdtree church" onclick="save('minor erdtree church')">
+        <label for="minor erdtree church">Minor Erdtree Church</label><br>
+        <input type="checkbox" id="sealed tunnel" onclick="save('sealed tunnel')">
+        <label for="sealed tunnel">Sealed Tunnel</label><br>
+    </div>
+
+    <div>
+        <h2>Volcano Manor <span id="volcano-count"></span></h2>
+        <input type="checkbox" id="volcano manor" onclick="save('volcano manor')">
+        <label for="volcano manor">Volcano Manor</label><br>
+        <input type="checkbox" id="volcano manor" onclick="save('volcano manor')">
+        <label for="volcano manor">Volcano Manor</label><br>
+        <input type="checkbox" id="prison town church" onclick="save('prison town church')">
+        <label for="prison town church">Prison Town Church</label><br>
+        <input type="checkbox" id="temple of eiglay" onclick="save('temple of eiglay')">
+        <label for="temple of eiglay">Temple of Eiglay</label><br>
+        <input type="checkbox" id="guest hall" onclick="save('guest hall')">
+        <label for="guest hall">Guest Hall</label><br>
+        <input type="checkbox" id="audience pathway" onclick="save('audience pathway')">
+        <label for="audience pathway">Audience Pathway</label><br>
+    </div>
+
+    <div>
+        <h2>Leyndell, Royal Capital <span id="leyndell-count"></span></h2>
+        <input type="checkbox" id="divine bridge" onclick="save('divine bridge')">
+        <label for="divine bridge">Divine Bridge</label><br>
+    </div>
+    
+    <div>
+        <h2>Caelid <span id="caelid-count"></span></h2>
+        <input type="checkbox" id="smoldering church" onclick="save('smoldering church')">
+        <label for="smoldering church">Smoldering Church</label><br>
+        <input type="checkbox" id="rotview balcony" onclick="save('rotview balcony')">
+        <label for="rotview balcony">Rotview Balcony</label><br>
+        <input type="checkbox" id="caelem ruins" onclick="save('caelem ruins')">
+        <label for="caelem ruins">Caelem Ruins</label><br>
+        <input type="checkbox" id="smoldering wall" onclick="save('smoldering wall')">
+        <label for="smoldering wall">Smoldering Wall</label><br>
+        <input type="checkbox" id="called highway south" onclick="save('called highway south')">
+        <label for="called highway south">Called Highway South</label><br>
+        <input type="checkbox" id="selia backstreets" onclick="save('selia backstreets')">
+        <label for="selia backstreets">Selia Backstreets</label><br>
+        <input type="checkbox" id="selia under-stair" onclick="save('selia under-stair')">
+        <label for="selia under-stair">Selia Under-Stair</label><br>
+        <input type="checkbox" id="chair-crypt of sellia" onclick="save('chair-crypt of sellia')">
+        <label for="chair-crypt of sellia">Chair-Crypt of Sellia</label><br>
+        <input type="checkbox" id="church of the plague" onclick="save('church of the plague')">
+        <label for="church of the plague">Church of the Plague</label><br>
+        <input type="checkbox" id="deep siofra well" onclick="save('deep siofra well')">
+        <label for="deep siofra well">Deep Siofra Well</label><br>
+        <input type="checkbox" id="impassable greatbridge" onclick="save('impassable greatbridge')">
+        <label for="impassable greatbridge">Impassable Greatbridge</label><br>
+        <input type="checkbox" id="chamber outside the plaza" onclick="save('chamber outside the plaza')">
+        <label for="chamber outside the plaza">Chamber Outside the Plaza</label><br>
+        <input type="checkbox" id="starscourge radahn" onclick="save('starscourge radahn')">
+        <label for="starscourge radahn">Starscourge Radahn</label><br>
+        <input type="checkbox" id="sellia crystal tunnel" onclick="save('sellia crystal tunnel')">
+        <label for="sellia crystal tunnel">Sellia Crystal Tunnel</label><br>
+
+        <h3>Swamp of Aenoia</h3>
+        <input type="checkbox" id="heart of aenoia" onclick="save('heart of aenoia')">
+        <label for="heart of aenoia">Heart of Aenoia</label><br>
+
+        <h3>Greyoll's Dragonbarrow</h3>
+        <input type="checkbox" id="greyoll's dragonbarrow" onclick="save('greyoll\'s dragonbarrow')">
+        <label for="greyoll's dragonbarrow">Greyoll's Dragonbarrow</label><br>
+        <input type="checkbox" id="dragonbarrow west" onclick="save('dragonbarrow west')">
+        <label for="dragonbarrow west">Dragonbarrow West</label><br>
+        <input type="checkbox" id="fort froth" onclick="save('fort froth')">
+        <label for="fort froth">Fort Froth</label><br>
+        <input type="checkbox" id="dragonbarrow fork" onclick="save('dragonbarrow fork')">
+        <label for="dragonbarrow fork">Dragonbarrow Fork</label><br>
+        <input type="checkbox" id="lenne's rise" onclick="save('lenne\'s rise')">
+        <label for="lenne's rise">Lenne's Rise</label><br>
+        <input type="checkbox" id="farum greatbridge" onclick="save('farum greatbridge')">
+        <label for="farum greatbridge">Farum Greatbridge</label><br>
+        <input type="checkbox" id="bestial sanctum" onclick="save('bestial sanctum')">
+        <label for="bestial sanctum">Bestial Sanctum</label><br>
+        <input type="checkbox" id="sellia hideaway" onclick="save('sellia hideaway')">
+        <label for="sellia hideaway">Sellia Hideaway</label><br>
+    </div>
 
 </body>
 </html>
